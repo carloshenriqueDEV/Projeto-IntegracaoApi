@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Api2</name>
+    </assembly>
+    <members>
+        <member name="T:Api2.Domain.Models.Montante">
+            <summary>
+            Classe que representa Montante de calculo de juros compostos.
+            
+            </summary>
+        </member>
+    </members>
+</doc>
