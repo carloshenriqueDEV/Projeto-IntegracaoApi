@@ -53,7 +53,7 @@ namespace Api2.Infrastructure.ApiServices
         Console.WriteLine(e.Message);
       }
 
-      throw new Exception("Não foi possível conectar com a Api.");
+      throw new Exception($"Não foi possível conectar com {uri}.");
     }
 
   }

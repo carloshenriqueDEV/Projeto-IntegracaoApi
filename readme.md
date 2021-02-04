@@ -50,9 +50,7 @@ Descrição: Esta api possui dois endpoints, um que retorna o calculo de juros c
     Domain/     
           Models/
                 Montante.cs (Classe modelo)
-                Code.cs (Classe modelo)
-          Utils/
-                MathUtils.cs (Classe de Calculos matemáticos)
+                Code.cs (Classe modelo)         
     Infrastructure/
                   ApiService/
                             Models/

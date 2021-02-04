@@ -3,6 +3,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.PlatformAbstractions;
+using Microsoft.OpenApi.Models;
+using System;
+using System.IO;
 
 namespace Api2
 {
@@ -18,6 +22,38 @@ namespace Api2
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Version = "v1",
+                    Title = "Api2",
+                    Description = "Api que retorna a taxa",
+                    TermsOfService = new Uri("https://example.com/terms"),
+                    Contact = new OpenApiContact
+                    {
+                        Name = "Carlos Henrique",
+                        Email = "carloshenriquexvii@gmail.com",
+                        Url = new Uri("https://github.com/carloshenriqueDEV"),
+                    },
+                    License = new OpenApiLicense
+                    {
+                        Name = string.Empty,
+                        Url = new Uri("https://example.com/license"),
+                    }
+                });
+
+
+                string caminhoAplicacao =
+                    PlatformServices.Default.Application.ApplicationBasePath;
+                string nomeAplicacao =
+                    PlatformServices.Default.Application.ApplicationName;
+                string caminhoXmlDoc =
+                    Path.Combine(caminhoAplicacao, $"{nomeAplicacao}.xml");
+
+                c.IncludeXmlComments(caminhoXmlDoc);
+            });
+
             services.AddControllers();
         }
 
@@ -28,6 +64,13 @@ namespace Api2
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json",
+                    "Api2");
+            });
 
             app.UseHttpsRedirection();
 

@@ -4,5 +4,32 @@
         <name>Api1</name>
     </assembly>
     <members>
+        <member name="T:Api1.Controllers.TaxaJuros">
+            <summary>
+            Classe que agrupa os endpoints que responde ao path relativo "/taxajuros" .
+            </summary>
+        </member>
+        <member name="M:Api1.Controllers.TaxaJuros.Get">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Api1.Domain.Models.Taxa">
+            <summary>
+            Classe que representa uma Taxa.
+            </summary>
+        </member>
+        <member name="P:Api1.Domain.Models.Taxa.Value">
+            <summary>
+            Propriedade que retorna/seta o valor da taxa.
+            </summary>
+        </member>
+        <member name="M:Api1.Domain.Models.Taxa.#ctor(System.Decimal)">
+            <summary>
+            Construtor da classe Taxa.
+            </summary>
+            <param name="taxa"></param>
+        </member>
     </members>
 </doc>

@@ -11,7 +11,7 @@ namespace Api2.Controllers
   public class ShowMeTheCode : ControllerBase
   {
         /// <summary>
-        /// Get relativo a seguinte url https://localhost:5003/showmethecode .
+        /// 
         /// </summary>
         /// <returns>O nome do repositório : url github do projeto.</returns>
         [HttpGet]

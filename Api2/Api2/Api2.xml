@@ -4,10 +4,141 @@
         <name>Api2</name>
     </assembly>
     <members>
+        <!-- Badly formed XML comment ignored for member "T:Api2.Controllers.CalculaJuros" -->
+        <member name="M:Api2.Controllers.CalculaJuros.Get(System.Decimal,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="valorInicial"></param>
+            <param name="meses"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Api2.Controllers.ShowMeTheCode">
+            <summary>
+            Classe que agrupa os endpoints que responde ao path relativo "/showmethecode".
+            </summary>
+        </member>
+        <member name="M:Api2.Controllers.ShowMeTheCode.Get">
+            <summary>
+            
+            </summary>
+            <returns>O nome do repositório : url github do projeto.</returns>
+        </member>
+        <member name="T:Api2.Domain.Models.Code">
+            <summary>
+            Classe que representa o código da aplicação.
+            </summary>
+        </member>
+        <member name="P:Api2.Domain.Models.Code.Repositorio">
+            <summary>
+            Propriedade que retorna o repositório do github do projeto.
+            </summary>
+        </member>
+        <member name="M:Api2.Domain.Models.Code.#ctor">
+            <summary>
+            Construtor padrão.
+            </summary>
+        </member>
         <member name="T:Api2.Domain.Models.Montante">
             <summary>
             Classe que representa Montante de calculo de juros compostos.
-            
+            </summary>
+        </member>
+        <member name="P:Api2.Domain.Models.Montante.ValorInicial">
+            <summary>
+            Retorna/Seta o valor inicial.
+            </summary>
+        </member>
+        <member name="P:Api2.Domain.Models.Montante.Meses">
+            <summary>
+            Retorna/Seta a quantidade de meses.
+            </summary>
+        </member>
+        <member name="P:Api2.Domain.Models.Montante.Taxa">
+            <summary>
+            Retorna/Seta o valor.
+            </summary>
+        </member>
+        <member name="P:Api2.Domain.Models.Montante.Resultado">
+            <summary>
+            Retorna/Seta o Resultado do calculo de montante.
+            </summary>
+        </member>
+        <member name="M:Api2.Domain.Models.Montante.#ctor">
+            <summary>
+            Construtor padrão.
+            </summary>
+        </member>
+        <member name="M:Api2.Domain.Models.Montante.#ctor(System.Decimal,System.Int32)">
+            <summary>
+            Construtor que recebe o valor Inicial e a quantidade de meses.
+            </summary>
+            <param name="valorInicial"></param>
+            <param name="meses"></param>
+        </member>
+        <member name="M:Api2.Domain.Models.Montante.PowDecimal(System.Decimal,System.Decimal)">
+            <summary>
+            Método que calcula a potência passando base e expoente, o retorno é um tipo decimal.
+            </summary>
+            <param name="b">Representa a base</param>
+            <param name="exp">Representa o expoente</param>
+            <returns></returns>
+        </member>
+        <member name="M:Api2.Domain.Models.Montante.TruncateDecimal(System.Decimal,System.Byte)">
+            <summary>
+            Método que recebe um valor decimal e o número de casas decimais,
+            e retorna um decimal truncado com a quantidade de casa informadas.
+            </summary>
+            <param name="value"></param>
+            <param name="decimals"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Api2.Domain.Models.Montante.CalculaMontante(System.Decimal,System.Decimal,System.Int32)">
+            <summary>
+            Método que recebe Valor Inicial, Taxa e Meses, e retorna o montante calculado.
+            </summary>
+            <param name="valorInicial"></param>
+            <param name="taxa"></param>
+            <param name="meses"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Api2.Infrastructure.ApiServices.ApiService`1">
+            <summary>
+            Classe estática Genérica que prover o serviço de conexão com várias API's.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Api2.Infrastructure.ApiServices.ApiService`1.GetAsync(System.String,System.String)">
+            <summary>
+            Método estático assincrono que faz requisição a Api's.
+            </summary>
+            <param name="uri">Representa a uri de uma api</param>
+            <param name="servico">Representa o serviço que será consumido das Api's</param>
+            <returns></returns>
+        </member>
+        <member name="T:Api2.Infrastructure.ApiServices.Models.Api1.Taxa">
+            <summary>
+            Classe que Representa um taxa do domínio da Api1.
+            </summary>
+        </member>
+        <member name="P:Api2.Infrastructure.ApiServices.Models.Api1.Taxa.Value">
+            <summary>
+            Propriedade Value que representa o valor de uma taxa decimal.
+            </summary>
+        </member>
+        <member name="T:Api2.Infrastructure.ApiServices.Models.GitHub.Repo">
+            <summary>
+            Classe que representa um repositório do domínio do github.
+            </summary>
+        </member>
+        <member name="P:Api2.Infrastructure.ApiServices.Models.GitHub.Repo.Nome">
+            <summary>
+            Propriedade que retorna/seta o nome do repositório do github.
+            </summary>
+        </member>
+        <member name="P:Api2.Infrastructure.ApiServices.Models.GitHub.Repo.Url">
+            <summary>
+            Propriedade que retorna/seta a url do repositório do github.
             </summary>
         </member>
     </members>
