@@ -119,39 +119,64 @@ A documentação dos endpoints das api's foram feitas com swagger, que de um mod
   Esse ajuste deve ser feito devido ao swagger, para o correto funcionamento ele necessita que o projeto possua um arquivo de documentação xml. Este arquivo quando gerado deve ser informado o local onde mesmo será salvo.
 
   Na aba Gerenciador de Soluções entre na pasta da Api1, nela você um pasta Api1 onde estão os arquivos fontes da Api e o arquivo Api1.sln, click no Arquivo .sln e aguarde o projeto carregar, após o carregamento da solução selecione o projeto como na imagem a baixo. 
+
   <img src="./imgs/selecao-api1.png">
+
   Com o projeto selecionado use o atalho alt + enter,
   o comando anterior abrirá as proriedades do projeto, nessa tela selecione a opção Compilar, vide a imagem abaixo.
+
   <img src="./imgs/xml-api1.png">
+
   Na sequência procure a opção Saída e no checkbox Arquivo de documentação XML desmarque-o e o marque-o novamente, feito isso salve e pronto o path já está configurado.
+
   <img src="./imgs/xml-api1-2.png">
+
   Tendo configurado o path podemos então roda a plicação.
   Utiliza o seguinte comando para abri o terminal PowerShell ctrl + '.
   com terminal aberto digite os seguintes comandos
-  cd Api1 (esse comando fará você entrar na pasta da Api1),
+
+  <pre>
+  cd Api1 (esse comando fará você entrar na pasta da Api1)  
   e depois cd Api1 novamente (esse outro fará você entra na pasta dos fontes da Api1),
   e por ultimo digite dotnet run (esse comando vai fazer o build e levantará a api1 no servidor Kestrel).
+  </pre>
+
   <img src="./imgs/api1-inicializada.png">
+
   Com a Api1 rodando acesse no navegador a seguinte url https://localhost:5001/swagger/index.html, ela carregará o Swagger mostrando os endpoint da Api1, nessa página você pode fazer chamadas a Api e fazer testes.
+
   <img src="./imgs/SwaggerApi1.png">
 
   ### Api2
+
   Após iniciar a Api1, vamos inicie a Api2 o procedimento é o mesmo, mas para fim didáticos documentei.
 
-  Na aba Gerenciador de Soluções entre na pasta da Api2, nela você um pasta Api2 onde estão os arquivos fontes da Api e o arquivo Api2.sln, click no Arquivo .sln e aguarde o projeto carregar, após o carregamento da solução selecione o projeto como na imagem a baixo. 
+  Na aba Gerenciador de Soluções entre na pasta da Api2, nela você um pasta Api2 onde estão os arquivos fontes da Api e o arquivo Api2.sln, click no Arquivo .sln e aguarde o projeto carregar, após o carregamento da solução selecione o projeto como na imagem a baixo.
+
   <img src="./imgs/selecao-api2.png">
+
   Com o projeto selecionado use o atalho alt + enter,
   o comando anterior abrirá as proriedades do projeto, nessa tela selecione a opção Compilar, vide a imagem abaixo.
+
   <img src="./imgs/xml-api2.png">
+
   Na sequência procure a opção Saída e no checkbox Arquivo de documentação XML desmarque-o e o marque-o novamente, feito isso salve e pronto o path já está configurado.
+
   <img src="./imgs/xml-api2-2.png">
-  Agora abra um novo terminal click no botão + PowerShell do Desenvolvedor
+
+  Agora abra um novo terminal clicando no botão + PowerShell do Desenvolvedor
+
   <img src="./imgs/adicionando-outro-terminal.png">
+
   com o novo terminal aberto digite os seguintes comandos
+
+  <pre>
   cd .. (Casso novo terminal você esteja na pasta Api1, use esse comando para voltar ao diretório raiz do projeto.)
-  cd Api2 (esse comando fará você entrar na pasta da Api2),
+  cd Api2 (esse comando fará você entrar na pasta da Api2)
   e depois cd Api2 novamente (esse outro fará você entra na pasta dos fontes da Api2),
   e por ultimo digite dotnet run (esse comando vai fazer o build e levantará a Api2 no servidor Kestrel).
+  </pre>
+  
   <img src="./imgs/Api2-inicializada.png">
   Com a Api2 rodando acesse no navegador a seguinte url https://localhost:5003/swagger/index.html, ela carregará o Swagger mostrando os endpoint da Api2, nessa página você pode fazer chamadas a Api e fazer testes.
   <img src="./imgs/SwaggerApi2.png">
