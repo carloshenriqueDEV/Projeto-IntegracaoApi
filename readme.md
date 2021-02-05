@@ -119,7 +119,7 @@ A documentação dos endpoints das api's foram feitas com swagger, que de um mod
   Esse ajuste deve ser feito devido ao swagger, para o correto funcionamento ele necessita que o projeto possua um arquivo de documentação xml. Este arquivo quando gerado deve ser informado o local onde mesmo será salvo.
 
   Na aba Gerenciador de Soluções entre na pasta da Api1, nela você um pasta Api1 onde estão os arquivos fontes da Api e o arquivo Api1.sln, click no Arquivo .sln e aguarde o projeto carregar, após o carregamento da solução selecione o projeto como na imagem a baixo. 
-  
+
   <img src="./imgs/selecao-api1.png">
 
   Com o projeto selecionado use o atalho alt + enter,
@@ -173,10 +173,10 @@ A documentação dos endpoints das api's foram feitas com swagger, que de um mod
   <pre>
   cd .. (Casso novo terminal você esteja na pasta Api1, use esse comando para voltar ao diretório raiz do projeto.)
   cd Api2 (esse comando fará você entrar na pasta da Api2)
-  </pre>
-
   e depois cd Api2 novamente (esse outro fará você entra na pasta dos fontes da Api2),
   e por ultimo digite dotnet run (esse comando vai fazer o build e levantará a Api2 no servidor Kestrel).
+  </pre>
+  
   <img src="./imgs/Api2-inicializada.png">
   Com a Api2 rodando acesse no navegador a seguinte url https://localhost:5003/swagger/index.html, ela carregará o Swagger mostrando os endpoint da Api2, nessa página você pode fazer chamadas a Api e fazer testes.
   <img src="./imgs/SwaggerApi2.png">
