@@ -1,7 +1,7 @@
 # Projeto Integração Api's
 
 Este projeto foi desenvolvido com entuito de expor minhas habilidades com C# e .Net Core,
-o mesmo tem objetivo alvo o desenvolvimento de duas Api's que devem se comunicar entre si, outros objetivos relacionados são expor meu nível de maturidade com o paradigma orientado a objetos, arquitetura de software, propriedades (Coesão, Acoplamento, Encapsulamento e Extensibilidade) e princípios (SOLID) de projetos.
+o objetivo alvo é desenvolvimento de duas Api's que devem se comunicar entre si, outros objetivos relacionados são, expor meu nível de maturidade com o paradigma orientado a objetos, arquitetura de software, propriedades  e princípios de projetos, como por exemplo Coesão, Acoplamento, Encapsulamento, Extensibilidade e SOLID.
 
 ## Arquitetura
   ambas as Api's seguem um padrão arquitetural em camadas, o qual permite ter Coesão, Baixo acoplamento e Extensibilidade, encapsulamento a nível de arquitetura.
@@ -70,6 +70,18 @@ Descrição: Esta api possui dois endpoints, um que retorna o calculo de juros c
 
 ## Prova de Conceito POC
 Prova de conceito onde testei como fazer chamadas a api's, nela testei duas maneiras um com o framework Refit e a outra HttpClient.
+<pre>
+    POC-Consumindo-Api1/
+                      net_http/
+                              Models/
+                                    Taxa.cs
+                              ConsumoHtppService.cs
+                      Refit/
+                            Interfaces/
+                                      ITaxaApi1Service.cs
+                            Models/
+                                  TaxaResponse.cs
+</pre>
 
 ## Testes
   Os teste unitários da aplicação foram desenvolvidos com Xunit, que é um framework para criação de teste da plataforma .net.  
@@ -80,7 +92,7 @@ A documentação dos endpoints das api's foram feitas com swagger, que de um mod
 
   ## Rodando o Projeto na sua máquina
 
-  Beleza agora que você já tem um noção do projeto, pode cloná-lo para dar uma olhada no código e executa-lo.
+  Beleza agora que você já tem um noção do projeto, pode cloná-lo para dar uma olhada no código e executá-lo.
 
   Para isso você precisará ter na sua máquina:
     .net core 3.1 e o Visual Studio 2019 instalados.
@@ -98,21 +110,20 @@ A documentação dos endpoints das api's foram feitas com swagger, que de um mod
   <img src="./imgs/linkgithub.png">
 
 ## 2° Passo - Ajustando e rodando o projeto
-  obs: esses procedimentos devem ser feito nas duas Api's para que o projeto possa rodar perfeitamente.
+  obs: esses os procedimentos a seguir devem ser feito nas duas Api's para que o projeto possa rodar perfeitamente.
 
   ## Api1
-  Após clonado, na aba Gerenciador de Soluções você terá a visualização de todo o projeto clonado.
+  Após clonado, na aba Gerenciador de Soluções você terá a visualização de todo o projeto.
 
   ### Configurando o path do arquivo de documentação xml
   Esse ajuste deve ser feito devido ao swagger, para o correto funcionamento ele necessita que o projeto possua um arquivo de documentação xml. Este arquivo quando gerado deve ser informado o local onde mesmo será salvo.
 
-  Na aba Gerenciador de Soluções entre na pasta da Api1, nela você um pasta onde estão os arquivos relativos a ele e Api1.sln, click
-  no Arquivo .sln e aguarde o projeto carregar, após o carregamento da solução selecione o projeto como na imagem a baixo. 
+  Na aba Gerenciador de Soluções entre na pasta da Api1, nela você um pasta Api1 onde estão os arquivos fontes da Api e o arquivo Api1.sln, click no Arquivo .sln e aguarde o projeto carregar, após o carregamento da solução selecione o projeto como na imagem a baixo. 
   <img src="./imgs/selecao-api1.png">
-  Com o projeto selecionado use atecla de atalho alt + enter,
+  Com o projeto selecionado use o atalho alt + enter,
   o comando anterior abrirá as proriedades do projeto, nessa tela selecione a opção Compilar, vide a imagem abaixo.
   <img src="./imgs/xml-api1.png">
-  Na sequência procure a opção Saída e no checkbox Arquivo de documentação XML desmarqueo e o marqueo novamente, feito isso salve e pronto o path já está configurado.
+  Na sequência procure a opção Saída e no checkbox Arquivo de documentação XML desmarque-o e o marque-o novamente, feito isso salve e pronto o path já está configurado.
   <img src="./imgs/xml-api1-2.png">
   Tendo configurado o path podemos então roda a plicação.
   Utiliza o seguinte comando para abri o terminal PowerShell ctrl + '.
@@ -127,17 +138,17 @@ A documentação dos endpoints das api's foram feitas com swagger, que de um mod
   ### Api2
   Após iniciar a Api1, vamos inicie a Api2 o procedimento é o mesmo, mas para fim didáticos documentei.
 
-  Na aba Gerenciador de Soluções entre na pasta da Api2, nela você um pasta onde estão os arquivos relativos a ele e Api2.sln, click
-  no Arquivo .sln e aguarde o projeto carregar, após o carregamento da solução selecione o projeto como na imagem a baixo.
+  Na aba Gerenciador de Soluções entre na pasta da Api2, nela você um pasta Api2 onde estão os arquivos fontes da Api e o arquivo Api2.sln, click no Arquivo .sln e aguarde o projeto carregar, após o carregamento da solução selecione o projeto como na imagem a baixo. 
   <img src="./imgs/selecao-api2.png">
-  Com o projeto selecionado use atecla de atalho alt + enter,
+  Com o projeto selecionado use o atalho alt + enter,
   o comando anterior abrirá as proriedades do projeto, nessa tela selecione a opção Compilar, vide a imagem abaixo.
   <img src="./imgs/xml-api2.png">
-  Na sequência procure a opção Saída e no checkbox Arquivo de documentação XML desmarqueo e o marqueo novamente, feito isso salve e pronto o path já está configurado.
+  Na sequência procure a opção Saída e no checkbox Arquivo de documentação XML desmarque-o e o marque-o novamente, feito isso salve e pronto o path já está configurado.
   <img src="./imgs/xml-api2-2.png">
   Agora abra um novo terminal click no botão + PowerShell do Desenvolvedor
   <img src="./imgs/adicionando-outro-terminal.png">
   com o novo terminal aberto digite os seguintes comandos
+  cd .. (Casso novo terminal você esteja na pasta Api1, use esse comando para voltar ao diretório raiz do projeto.)
   cd Api2 (esse comando fará você entrar na pasta da Api2),
   e depois cd Api2 novamente (esse outro fará você entra na pasta dos fontes da Api2),
   e por ultimo digite dotnet run (esse comando vai fazer o build e levantará a Api2 no servidor Kestrel).
