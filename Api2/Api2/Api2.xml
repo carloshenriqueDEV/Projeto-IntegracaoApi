@@ -11,7 +11,7 @@
             </summary>
             <param name="valorInicial"></param>
             <param name="meses"></param>
-            <returns></returns>
+            <returns>Retorna o montante calculado, no tipo string.</returns>
         </member>
         <member name="T:Api2.Controllers.ShowMeTheCode">
             <summary>

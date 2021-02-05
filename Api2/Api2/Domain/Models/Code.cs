@@ -18,7 +18,7 @@ namespace Api2.Domain.Models
         /// </summary>
         public Code()
         {
-            Repositorio = ApiService<Repo>.GetAsync(uri: "https://api.github.com", servico:"/repos/carloshenriqueDEV/events_site").Result;
+            Repositorio = ApiService<Repo>.GetAsync(uri: "https://api.github.com", servico:"/repos/carloshenriqueDEV/Projeto-IntegracaoApi").Result;
         }
         
     }

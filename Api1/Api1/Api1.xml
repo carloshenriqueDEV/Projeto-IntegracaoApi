@@ -13,7 +13,7 @@
             <summary>
             
             </summary>
-            <returns></returns>
+            <returns>Retorna a taxa em formato json.</returns>
         </member>
         <member name="T:Api1.Domain.Models.Taxa">
             <summary>
