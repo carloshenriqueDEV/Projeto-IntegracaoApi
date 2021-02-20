@@ -1,5 +1,6 @@
 ﻿using Api1.Domain.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 
 namespace Api1.Controllers
 {
@@ -10,6 +11,11 @@ namespace Api1.Controllers
   [ApiController]
   public class TaxaJuros : Controller
   {
+    public decimal _taxa {get; private set; }
+    public TaxaJuros(IConfiguration config)
+    {
+        _taxa = config.GetValue<decimal>("TAXA");
+    }
     /// <summary>
     /// 
     /// </summary>
@@ -17,7 +23,7 @@ namespace Api1.Controllers
     [HttpGet]
     public JsonResult Get()
     {
-      var taxa = new Taxa(0.01M);
+      var taxa = new Taxa(_taxa);
       return new JsonResult(taxa);
     }
   }
